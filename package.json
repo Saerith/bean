@@ -1,0 +1,29 @@
+{
+  "name": "bean",
+  "version": "0.0.1",
+  "description": "An event log module",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saerith/bean.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saerith/bean/issues"
+  },
+  "homepage": "https://github.com/Saerith/bean#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2"
+  },
+  "dependencies": {
+    "npm": "^6.4.1",
+    "npx": "^10.2.0"
+  }
+}
