@@ -1,7 +1,7 @@
 import log from 'electron-log'; 
 import { Message } from './message';
 
-export default class EventLog {
+class EventLog {
     _topics: Map<string, Array<Message>>;
     _offsets: Map<string, number>;
 
@@ -18,7 +18,7 @@ export default class EventLog {
      * @param message the message
      * @returns the offset index of the message for the topic
      */
-    push(topic: string, message: Message) {
+    produce(topic: string, message: Message) {
         let offset;
 
         // create a new topic if it doesn't exist
@@ -46,7 +46,7 @@ export default class EventLog {
      * @param topic the topic name
      * @param offset the offset index
      */
-    getMessage(topic: string, offset: number) {
+    consume(topic: string, offset: number) {
         return this._topics.get(topic)[offset-1];
     }
 
@@ -58,3 +58,5 @@ export default class EventLog {
         return this._offsets.get(topic);
     }
 }
+
+export default new EventLog();
